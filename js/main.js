@@ -9,15 +9,15 @@ let draggedPiece;
 
 //functions
 function changeBGImage(event) {
-    //console.log("changeBGimage called");
+    console.log("changeBGimage called");
     //Method 1
-    //console.log(this.id);
-    //background-image: url('../images/backGround0.jpg');
-    // puzzleBoard.style.backgroundImage = `url('./images/backGround${this.id}.jpg')`;
+    console.log(this.id);
+    // background-image: url('../images/backGround0.jpg');
+    puzzleBoard.style.backgroundImage = `url('./images/backGround${this.id}.jpg')`;
 
-    //Method 2
-    console.log(event.currentTarget.id);
-    puzzleBoard.style.backgroundImage = `url('./images/backGround${event.currentTarget.id}.jpg')`;
+    // //Method 2
+    // console.log(event.currentTarget.id);
+    // puzzleBoard.style.backgroundImage = `url('./images/backGround${event.currentTarget.id}.jpg')`;
 }
 
 function handleStartDrag() {
