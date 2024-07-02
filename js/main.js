@@ -6,10 +6,17 @@ const puzzleBoard = document.querySelector(".puzzle-board");
 const puzzlePieces = document.querySelectorAll(".puzzle-pieces img");
 const dropZones = document.querySelectorAll(".drop-zone");
 const puzzlePieceDiv = document.querySelector(".puzzle-pieces");
+const resetButton = document.querySelector("#resetBut");
 let draggedPiece;
 
 //functions
-function changeBGImage(event) {
+
+function reset() {
+    console.log("Reset pieces");
+    puzzlePieces.forEach(piece => puzzlePieceDiv.appendChild(piece));
+}
+
+function changeBGImage() {
     console.log("changeBGimage called");
     //Method 1
     console.log(this.id);
@@ -59,3 +66,5 @@ puzzlePieces.forEach(piece => piece.addEventListener("dragstart", handleStartDra
 dropZones.forEach(zone => zone.addEventListener("dragover", handleOver));
 
 dropZones.forEach(zone => zone.addEventListener("drop", handleDrop));
+
+resetButton.addEventListener("click", reset);
