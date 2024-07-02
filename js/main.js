@@ -27,10 +27,15 @@ function handleStartDrag() {
 
 function handleOver(e) {
     e.preventDefault();
-    console.log("Dragged Over")
+    console.log("Dragged Over");
 }
 
 function handleDrop() {
+    // This is where the fix will go
+    // going to use an if statement
+    if(this.children.length >= 1) {
+        return;
+    }
     this.appendChild(draggedPiece);
 }
 
